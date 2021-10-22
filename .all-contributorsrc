@@ -1,0 +1,24 @@
+{
+  "projectName": "nestjs-gql-prisma",
+  "projectOwner": "MileTwo",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "commitConvention": "none",
+  "contributors": [
+    {
+      "login": "sgentile",
+      "name": "Steve Gentile",
+      "avatar_url": "https://avatars.githubusercontent.com/u/132404?v=4",
+      "profile": "https://github.com/sgentile",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
+}
