@@ -1,6 +1,0 @@
-.next/
-node_modules/
-charts/
-prisma/
-tests/
-next-env.d.ts

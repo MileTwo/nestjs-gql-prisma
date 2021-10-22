@@ -1,0 +1,29 @@
+query getTool {
+  tool(id: "12") {
+    id
+        name
+        description
+        link
+        image
+  }
+}
+
+query getTools {
+    tools {
+        id
+        name
+        description
+        link
+        image
+    }
+}
+
+mutation updateTool {
+  updateTool(input: { id: "12", name: "First Tool", description: "My first tool", link: "http://foobar.com", image: "/typescript.svg" }) {
+        id
+        name
+        description
+        link
+        image
+    }
+}
