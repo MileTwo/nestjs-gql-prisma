@@ -2,7 +2,7 @@
     "name": "nestjs-prisma-graphql",
     "version": "0.0.1",
     "description": "",
-    "author": "",
+    "author": "Steve Gentile",
     "private": true,
     "license": "UNLICENSED",
     "prisma": {
