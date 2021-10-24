@@ -5,7 +5,7 @@ import { HealthCheck } from '@nestjs/terminus';
 @Controller()
 export class AppController {
     @ApiTags('health')
-    @Get()
+    @Get('/api/health')
     @HealthCheck()
     public getHealthCheck() {
         // https://docs.nestjs.com/recipes/terminus
