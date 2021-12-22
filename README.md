@@ -16,6 +16,8 @@ $ npm install
 
 ## Running the app
 
+The GraphQL playground can be accessed at `localhost:3000/graphql`.
+
 ```bash
 # development
 $ npm run start
