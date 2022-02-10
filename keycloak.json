@@ -1,0 +1,7 @@
+{
+    "realm": "TechSuite-edge",
+    "auth-server-url": "https://keycloak.afwerx.mile-two.com/auth",
+    "ssl-required": "external",
+    "resource": "techsuite-identity-api",
+    "confidential-port": 0
+}

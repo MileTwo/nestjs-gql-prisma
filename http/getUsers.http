@@ -1,0 +1,23 @@
+# @name keycloak
+POST https://keycloak.afwerx.mile-two.com/auth/realms/TechSuite-edge/protocol/openid-connect/token
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=client_credentials
+&client_id=techscout-postman
+&client_secret=2fc7f9e1-05bf-409e-ae35-8e1cf37c4557
+
+###
+@authToken = {{keycloak.response.body.access_token}}
+
+### getUsers
+POST http://localhost:9000/api
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+X-REQUEST-TYPE: GraphQL
+appid: 37003fee-0516-40c0-9073-33146354db97
+
+query users {
+  users {
+    id
+  }
+}

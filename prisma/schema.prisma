@@ -1,8 +1,28 @@
+// // This is your Prisma schema file,
+// // learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// datasource db {
+//   provider = "sqlite"
+//   url      = env("DATABASE_URL")
+// }
+
+// generator client {
+//   provider = "prisma-client-js"
+// }
+
+// model Tool {
+//   id          Int     @id @default(autoincrement())
+//   name        String  @unique
+//   description String
+//   link        String
+//   image       String?
+// }
+
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
@@ -10,10 +30,23 @@ generator client {
   provider = "prisma-client-js"
 }
 
-model Tool {
-  id          Int     @id @default(autoincrement())
-  name        String  @unique
-  description String
-  link        String
-  image       String?
+model Organization {
+  id    String @id @default(uuid())
+  name  String @unique
+  users User[]
+
+  @@map("organization")
+}
+
+model User {
+  id           String        @id @default(uuid())
+  name         String        @unique
+  firstName    String        @map("first_name")
+  lastName     String        @map("last_name")
+  emailAddress String        @map("email_address")
+  organization Organization? @relation(fields: [organization_id], references: [id])
+
+  organization_id String?
+
+  @@map("app_user")
 }

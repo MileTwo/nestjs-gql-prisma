@@ -6,6 +6,6 @@ async function bootstrap() {
     const app = await NestFactory.create(AppModule);
     const appConfig = config().app;
     await app.listen(appConfig.port);
-    console.log(`Service is running on: ${await app.getUrl()}`);
+    console.log(`Service is running on: ${await app.getUrl()}/api`);
 }
 bootstrap();
